@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/strawberryjammm/static/css/main.f855e6bc.css",
-    "main.js": "/strawberryjammm/static/js/main.2c3992b3.js",
+    "main.css": "/strawberryjammm/static/css/main.837eb43f.css",
+    "main.js": "/strawberryjammm/static/js/main.3822bbce.js",
     "static/js/453.30b0e519.chunk.js": "/strawberryjammm/static/js/453.30b0e519.chunk.js",
-    "static/media/logo.svg": "/strawberryjammm/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/strawberryjammm/index.html",
-    "main.f855e6bc.css.map": "/strawberryjammm/static/css/main.f855e6bc.css.map",
-    "main.2c3992b3.js.map": "/strawberryjammm/static/js/main.2c3992b3.js.map",
+    "main.837eb43f.css.map": "/strawberryjammm/static/css/main.837eb43f.css.map",
+    "main.3822bbce.js.map": "/strawberryjammm/static/js/main.3822bbce.js.map",
     "453.30b0e519.chunk.js.map": "/strawberryjammm/static/js/453.30b0e519.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.2c3992b3.js"
+    "static/css/main.837eb43f.css",
+    "static/js/main.3822bbce.js"
   ]
 }
