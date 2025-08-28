@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import React from 'react';
+import Search from './components/Search';
+import Songlist from './components/Songlist';
+import Playlist from './components/Playlist';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-container">
+      <header className="app-header">
+        <h1>Welcome to Strawberry Jammm!</h1>
+        <h4>Pick some songs, mash 'em to a playlist, and jar your jammm!</h4>
       </header>
+      <main className="app-main">
+        <Search />
+        <div className="lists-container">
+        <Songlist />
+        <Playlist />
+        </div>
+      </main>
     </div>
   );
 }
