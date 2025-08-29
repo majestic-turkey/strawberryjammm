@@ -10,6 +10,8 @@
     border: 2px solid #ffd700;
     max-width: 480px;
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .search-section h2 {
     color: #41004e;

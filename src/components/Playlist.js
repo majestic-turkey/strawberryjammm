@@ -1,4 +1,6 @@
+
 import React from 'react';
+import '../styles/Playlist.css';
 
 export default function Playlist() {
   return (

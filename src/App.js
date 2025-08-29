@@ -3,6 +3,9 @@ import React from 'react';
 import Search from './components/Search';
 import Songlist from './components/Songlist';
 import Playlist from './components/Playlist';
+import { mockResults } from './components/MockResults';
+
+const results = mockResults;
 
 function App() {
   return (
@@ -14,7 +17,7 @@ function App() {
       <main className="app-main">
         <Search />
         <div className="lists-container">
-        <Songlist />
+        <Songlist resultList={results} />
         <Playlist />
         </div>
       </main>

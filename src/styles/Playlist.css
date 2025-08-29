@@ -1,0 +1,57 @@
+.playlist-section {
+    background: #2d0036;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(45,0,54,0.25), 0 1px 0 #ffd70022 inset;
+    padding: 32px 40px 24px 40px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ffd700;
+    max-width: 480px;
+    width: 100%;
+}
+.playlist-section h2 {
+    color: #ffd700;
+    margin-bottom: 18px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #ffd70033;
+}
+.playlist-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    width: 100%;
+}
+.playlist-section li {
+    background: #1a0020;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    color: #ffd700;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px #ffd70011 inset;
+    border: 1px solid #ffd700;
+    transition: box-shadow 0.2s;
+}
+.playlist-section li:hover {
+    box-shadow: 0 0 0 2px #ffd70055;
+    background: #2d0036;
+}
+.playlist-section button {
+    background: linear-gradient(180deg, #ffd700 0%, #2d0036 100%);
+    color: #2d0036;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #ffd70033, 0 1px 0 #2d0036 inset;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.playlist-section button:hover {
+    background: linear-gradient(180deg, #2d0036 0%, #ffd700 100%);
+    box-shadow: 0 4px 16px #ffd70055;
+}

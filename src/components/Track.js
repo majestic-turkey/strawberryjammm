@@ -2,15 +2,12 @@
 import React from 'react';
 import '../styles/Track.css';
 
-function Track({ title, artist, album, duration }) {
+function Track({ name, artist, album }) {
     return (
         <div className="track">
             <div className="track-info">
-                <div className="track-title">{title}</div>
+                <div className="track-title">{name}</div>
                 <div className="track-details">{artist} &ndash; {album}</div>
-            </div>
-            <div className="track-duration">
-                {duration}
             </div>
         </div>
     );
