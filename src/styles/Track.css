@@ -1,0 +1,22 @@
+.track {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.track-info {
+    flex: 1;
+}
+.track-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+.track-details {
+    color: #555;
+    font-size: 14px;
+}
+.track-duration {
+    color: #888;
+    font-size: 14px;
+    margin-left: 16px;
+}
