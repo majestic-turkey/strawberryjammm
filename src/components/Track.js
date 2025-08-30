@@ -7,7 +7,7 @@ function Track({ name, artist, album }) {
         <div className="track">
             <div className="track-info">
                 <div className="track-title">{name}</div>
-                <div className="track-details">{artist} &ndash; {album}</div>
+                <div className="track-details">{artist} &ndash; <span className="album">{album}</span></div>
             </div>
         </div>
     );

@@ -1,22 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+
 .track {
-    display: flex;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+     display: flex;
+     align-items: center;
+     background: #40004e;
+     border-radius: 8px;
+     margin-bottom: 10px;
+     padding: 12px 18px;
+     color: #ffd700;
+     font-size: 1.1rem;
+     box-shadow: 0 2px 8px #ffd9002a inset;
+     border: 1px solid #ffd700;
+     transition: box-shadow 0.2s, background 0.2s;
+ }
+ .track:hover {
+     box-shadow: 0 0 0 2px #ffd70055;
+     background: #2d0036;
 }
-.track-info {
-    flex: 1;
+ .track-info {
+     flex: 1;
 }
-.track-title {
-    font-weight: bold;
-    font-size: 16px;
+ .track-title {
+    font-family: "Epunda Sans", sans-serif;
+     font-weight: bold;
+     font-size: 16px;
+     color: #ffd700;
 }
-.track-details {
-    color: #555;
-    font-size: 14px;
+ .track-details {
+     color: #fff8dc;
+     font-family: "Epunda Sans", sans-serif;
+     font-size: 1rem;
 }
-.track-duration {
-    color: #888;
-    font-size: 14px;
-    margin-left: 16px;
+ .track-details .album {
+    font-family: "Epunda Slab", sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #ffeb99;
+ }
+ .track-duration {
+     color: #ffd700;
+     font-size: 14px;
+     margin-left: 16px;
 }
