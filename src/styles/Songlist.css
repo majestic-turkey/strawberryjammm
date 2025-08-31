@@ -1,3 +1,11 @@
+.track-in-playlist {
+    background: #41004e !important;
+    color: #ffd700 !important;
+    opacity: 0.6;
+    border: 2px solid #ffd700;
+    border-radius: 8px;
+    pointer-events: none;
+}
 .songlist-section {
     background: #2d0036;
     border-radius: 16px;
@@ -19,6 +27,16 @@
     gap: 10px;
     margin: 0 0 16px 0;
 }
+
+.track-selected {
+    background: #ffd700 !important;
+    color: #2d0036 !important;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 0 2px #ffd70055;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
 
      .songlist-section h2 {
         color: #ffd700;

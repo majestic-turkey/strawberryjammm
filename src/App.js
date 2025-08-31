@@ -20,7 +20,17 @@ function App() {
       <main className="app-main">
         <Search />
         <div className="lists-container">
-        <Songlist resultList={results} onSearch={setResults} />
+        <Songlist
+          resultList={results}
+          onSearch={setResults}
+          onAddToPlaylist={(tracks) =>
+            setPlaylist(prev => ({
+              ...prev,
+              tracks: [...prev.tracks, ...tracks.filter(t => !prev.tracks.some(pt => pt.id === t.id))]
+            }))
+          }
+          playlist={playlist}
+        />
         <Playlist playList={playlist} onAdd={setPlaylist}/>
         </div>
       </main>

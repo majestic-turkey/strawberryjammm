@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import '../styles/Playlist.css';
 import Track from './Track';
 
-export default function Playlist({ playList }) {
+export default function Playlist({ playList, onAdd }) {
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState(playList.name);
+  const tracks = playList?.tracks || [];
 
   const handleNameClick = () => setIsEditing(true);
   const handleChange = (e) => setName(e.target.value);
@@ -15,7 +16,14 @@ export default function Playlist({ playList }) {
       setIsEditing(false);
     }
   };
-  const tracks = playList?.tracks || [];
+  const handleRemoveTrack = (id) => {
+    if (onAdd) {
+      onAdd({
+        ...playList,
+        tracks: tracks.filter(track => track.id !== id)
+      });
+    }
+  };
   return (
     <section className="playlist-section">
       {isEditing ? (
@@ -35,7 +43,7 @@ export default function Playlist({ playList }) {
       <div className="playlist-tracks">
         {tracks.length > 0 ? (
           tracks.map((track) => (
-            <Track key={track.id} {...track} />
+            <Track key={track.id} {...track} onRemove={() => handleRemoveTrack(track.id)} />
           ))
         ) : (
           <div>No tracks in playlist</div>

@@ -2,6 +2,7 @@
 
 .track {
      display: flex;
+     position: relative;
      align-items: center;
      background: #40004e;
      border-radius: 8px;
@@ -41,4 +42,29 @@
      color: #ffd700;
      font-size: 14px;
      margin-left: 16px;
+}
+.track-remove-btn {
+    position: absolute !important;
+    top: 2px !important;
+    right: -10px !important;
+    background: transparent !important;
+    color: #ffd700 !important;
+    border: none !important;
+    border-radius: 0;
+    width: 18px;
+    height: 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: none !important;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 0;
+    line-height: 1;
+}
+.track-remove-btn:hover {
+    color: #fff8dc;
 }
