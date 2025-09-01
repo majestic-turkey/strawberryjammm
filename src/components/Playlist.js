@@ -16,14 +16,27 @@ export default function Playlist({ playList, onAdd }) {
       setIsEditing(false);
     }
   };
-  const handleRemoveTrack = (id) => {
+  const handleRemoveTrack = (uri) => {
     if (onAdd) {
       onAdd({
         ...playList,
-        tracks: tracks.filter(track => track.id !== id)
+        tracks: tracks.filter(track => track.uri !== uri)
       });
     }
   };
+    const handleSaveToSpotify = () => {
+      const playlistArray = [name, ...tracks.map(track => track.uri)];
+      console.log('Playlist array for Spotify:', playlistArray);
+      // TODO: Replace with actual API call
+      if (onAdd) {
+        onAdd({
+          ...playList,
+          name: 'New Playlist',
+          tracks: []
+        });
+      }
+  };
+
   return (
     <section className="playlist-section">
       {isEditing ? (
@@ -43,13 +56,13 @@ export default function Playlist({ playList, onAdd }) {
       <div className="playlist-tracks">
         {tracks.length > 0 ? (
           tracks.map((track) => (
-            <Track key={track.id} {...track} onRemove={() => handleRemoveTrack(track.id)} />
+            <Track key={track.uri} {...track} onRemove={() => handleRemoveTrack(track.uri)} />
           ))
         ) : (
           <div>No tracks in playlist</div>
         )}
       </div>
-      <button>Save to Spotify</button>
+      <button onClick={handleSaveToSpotify}>Save to Spotify</button>
     </section>
   );
 }

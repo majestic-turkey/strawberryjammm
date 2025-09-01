@@ -14,26 +14,26 @@ export default function Songlist({ resultList, onAddToPlaylist, playlist }) {
   };
 
   const handleAddToPlaylist = () => {
-    const selectedTracks = resultList.filter(track => selected.includes(track.id));
+    const selectedTracks = resultList.filter(track => selected.includes(track.uri));
     if (onAddToPlaylist) onAddToPlaylist(selectedTracks);
     setSelected([]);
   };
 
-  const playlistTrackIds = (playlist?.tracks || []).map(t => t.id);
+  const playlistTrackIds = (playlist?.tracks || []).map(t => t.uri);
   return (
     <section className="songlist-section">
       <h2>Search Results</h2>
       <div className="songlist-tracks">
         {resultList.length > 0 ? resultList.map((track) => {
-          const isSelected = selected.includes(track.id);
-          const isInPlaylist = playlistTrackIds.includes(track.id);
+          const isSelected = selected.includes(track.uri);
+          const isInPlaylist = playlistTrackIds.includes(track.uri);
           return (
             <div
-              key={track.id}
+              key={track.uri}
               className={
                 isSelected ? "track-selected" : isInPlaylist ? "track-in-playlist" : ""
               }
-              onClick={() => handleTrackClick(track.id)}
+              onClick={() => handleTrackClick(track.uri)}
               style={{ cursor: 'pointer' }}
             >
               <Track {...track} />

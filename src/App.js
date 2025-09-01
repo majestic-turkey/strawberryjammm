@@ -26,7 +26,7 @@ function App() {
           onAddToPlaylist={(tracks) =>
             setPlaylist(prev => ({
               ...prev,
-              tracks: [...prev.tracks, ...tracks.filter(t => !prev.tracks.some(pt => pt.id === t.id))]
+              tracks: [...prev.tracks, ...tracks.filter(t => !prev.tracks.some(pt => pt.uri === t.uri))]
             }))
           }
           playlist={playlist}
