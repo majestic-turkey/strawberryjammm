@@ -18,6 +18,27 @@
     font-weight: 700;
     text-shadow: 0 2px 8px #ffd70033;
 }
+
+.playlist-name-input {
+    width: 80%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ffd700;
+    background: #1a0020;
+    color: #ffd700;
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px #ffd70022 inset;
+    outline: none;
+    margin-bottom: 18px;
+    text-align: center;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.playlist-name-input:focus {
+    box-shadow: 0 0 0 2px #ffd70055;
+    background: #2d0036;
+}
+
 .playlist-section ul {
     list-style: none;
     padding: 0;
@@ -40,7 +61,7 @@
     background: #2d0036;
 }
 .playlist-section button {
-    background: linear-gradient(180deg, #ffd700 0%, #2d0036 100%);
+    background: linear-gradient(180deg, #ffd700 0%, #a3ae00a9 100%);
     color: #2d0036;
     border: 1px solid #ffd700;
     border-radius: 8px;
@@ -52,6 +73,6 @@
     transition: background 0.2s, box-shadow 0.2s;
 }
 .playlist-section button:hover {
-    background: linear-gradient(180deg, #2d0036 0%, #ffd700 100%);
+    background: linear-gradient(180deg, #a3ae00a9 0%, #ffd700 100%);
     box-shadow: 0 4px 16px #ffd70055;
 }
